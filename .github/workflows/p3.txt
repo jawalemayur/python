@@ -1,0 +1,19 @@
+lst = [3,1,2,9,4,6]
+print(lst)
+u_l = lst[::]
+lst.sort()
+print(lst)
+
+swap = 0 
+for i in range(0,len(u_l),2):
+ f_e = u_l[i]
+ f_e_i = lst.index(f_e)
+ e_p = lst[- f_e_i - 1]
+ i_e_p = u_l.index(e_p)
+ if e_p != u_l[i+1]:
+  temp = u_l[i_e_p]
+  u_l[i_e_p] = u_l[i+1]
+  u_l[i+1] = temp
+  swap += 1
+print(swap)
+ 
